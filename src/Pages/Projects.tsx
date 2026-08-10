@@ -30,9 +30,8 @@ function ProjectCard({ p, i }: { p: Project; i: number }) {
               className="h-full w-full object-cover"
             />
           ) : (
-            <div className="flex flex-col items-center gap-2" aria-hidden="true">
+            <div className="flex items-center justify-center" aria-hidden="true">
               <span className="gas-led" style={{ "--led": hex } as CSSProperties} />
-              <span className="silkscreen text-[0.6rem] text-inkdim">CAPTURE PENDING</span>
             </div>
           )}
         </div>
