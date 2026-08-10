@@ -54,7 +54,7 @@ export default function Techno() {
         {GROUPS.map((g, i) => (
           <Reveal key={g.title} delay={i * 80}>
             <article className="panel panel-hover flex h-full flex-col p-5" style={{ "--card-gas": g.gas } as CSSProperties}>
-              <div className="flex items-baseline justify-between gap-3">
+              <div className="flex flex-wrap items-baseline justify-between gap-3">
                 <h3 className="silkscreen text-sm text-ink">{g.title}</h3>
                 <span className="text-[0.6rem] tracking-widest text-inkdim">{g.sub}</span>
               </div>

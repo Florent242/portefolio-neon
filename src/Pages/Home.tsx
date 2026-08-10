@@ -29,12 +29,12 @@ export default function Home() {
   return (
     <section id="top" className="relative flex min-h-svh flex-col items-center justify-center px-4 pb-16 pt-24">
       <div className="mx-auto w-full max-w-3xl text-center">
-        <div className="mx-auto mb-8 w-full max-w-md">
+        <div className="mx-auto mb-8 w-full max-w-[240px] sm:max-w-md">
           <NeonSign interactive lit />
         </div>
 
         <Reveal delay={120}>
-          <h1 className="display text-5xl font-semibold tracking-tight text-ink sm:text-6xl md:text-7xl">
+          <h1 className="display text-5xl font-semibold leading-[1.05] tracking-tight text-ink sm:text-6xl md:text-7xl">
             Florent BOUDZOUMOU
           </h1>
         </Reveal>
