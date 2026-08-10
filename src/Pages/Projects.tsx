@@ -13,28 +13,6 @@ function ProjectCard({ p, i }: { p: Project; i: number }) {
         className="panel panel-hover flex h-full flex-col gap-3 p-5"
         style={{ "--card-gas": hex } as CSSProperties}
       >
-        <div
-          className="relative flex h-32 items-center justify-center overflow-hidden rounded-sm"
-          style={{
-            border: "1px solid var(--neon-line)",
-            backgroundColor: "var(--neon-bg-soft)",
-            boxShadow: `inset 0 0 40px -18px ${hex}`,
-          }}
-          aria-label={p.screenshot ? `Screenshot of ${p.name}` : undefined}
-        >
-          {p.screenshot ? (
-            <img
-              src={p.screenshot}
-              alt={`${p.name} — screenshot`}
-              loading="lazy"
-              className="h-full w-full object-cover"
-            />
-          ) : (
-            <div className="flex items-center justify-center" aria-hidden="true">
-              <span className="gas-led" style={{ "--led": hex } as CSSProperties} />
-            </div>
-          )}
-        </div>
         <div className="flex items-center justify-between gap-3">
           <h3 className="display text-xl font-semibold tracking-tight text-ink">{p.name}</h3>
           <span className="gas-chip" style={{ "--chip-gas": hex } as CSSProperties}>
