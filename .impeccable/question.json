@@ -1,0 +1,72 @@
+{
+  "title": "Choose the visual world",
+  "question": "The roll assigned Server Room — the datacenter of your own portfolio. Keep it, take an alternate, or re-roll.",
+  "options": [
+    {
+      "id": "assigned",
+      "label": "Server Room",
+      "kicker": "THE ROLL",
+      "lineage": "the datacenter rack in a hot climate: brushed panels, cable lacing, silkscreen labels, status LEDs",
+      "thesis": "The portfolio becomes the server room of its own author: every section is a rack panel, every project a blinking status LED.",
+      "palette": ["#0b0d10", "#f59e0b", "#4ade80", "#38bdf8", "#e8e6e3"],
+      "materials": ["brushed metal panels", "cable lacing", "silkscreen labels", "status LEDs"],
+      "viewport": "A rack of panels fills the hero: the FB monogram as a lit server badge, the role as a silkscreen label, and a live row of project status LEDs — real facts, each light mapped to a real project.",
+      "risk": "Gadget-y if the LEDs never mean anything — every light must map to a real project or metric.",
+      "sketch": ".impeccable/sketches/assigned.svg",
+      "case": "Assigned by the roll. Fuses cleanly: DevOps is his real production work (2-VPS AURA architecture, CI/CD Miss ESGIS, Docker everywhere)."
+    },
+    {
+      "id": "challenger-neon",
+      "label": "Neon Circuit",
+      "lineage": "hand-bent neon signage: one continuous glass tube, electrodes, gas discharge",
+      "thesis": "The FB monogram as a single bent glass tube; the page is the circuit that keeps it lit.",
+      "case": "Fuses cleanly for the monogram hero, loses on audience identification: neon is global signage, not the francophone-African tech scene the recruiters live in.",
+      "palette": ["#0a0b0f", "#2563eb", "#ef4444", "#f59e0b"],
+      "materials": ["bent glass tube", "electrode seals", "gas discharge"],
+      "viewport": "One continuous cobalt 'FB' stroke drawn across a dark room; the nav and sections are the transformer circuit feeding it.",
+      "risk": "Typographic legibility at small sizes; novelty can age fast.",
+      "sketch": ".impeccable/sketches/challenger-neon.svg",
+      "hero": "https://impeccable.style/worlds/cards/magnetism-electricity-plasma-hand-bent-neon-circuit-hero.webp",
+      "board": "https://impeccable.style/worlds/cards/magnetism-electricity-plasma-hand-bent-neon-circuit.webp"
+    },
+    {
+      "id": "challenger-drum",
+      "label": "Drum Machine",
+      "lineage": "early-80s rhythm machine step row: sixteen candy keys under a chase light",
+      "thesis": "Career and projects as a sixteen-step row with a chase light: 'now' is always lit.",
+      "case": "Strong interaction — steps are projects, the chase light is the timeline — but music gear reads western, not his scene.",
+      "palette": ["#16181c", "#ef4444", "#f97316", "#facc15", "#f8fafc"],
+      "materials": ["charcoal panel", "candy step keys", "lit LEDs", "silkscreen caps"],
+      "viewport": "A full-width step row under the hero: each step is a project, tapping it lights and opens it; the chase light sweeps with your scroll.",
+      "risk": "Sixteen steps can trivialize a long career; key metaphor needs a legend.",
+      "sketch": ".impeccable/sketches/challenger-drum.svg",
+      "hero": "https://impeccable.style/worlds/cards/signals-instruments-drum-machine-step-row-hero.webp",
+      "board": "https://impeccable.style/worlds/cards/signals-instruments-drum-machine-step-row.webp"
+    },
+    {
+      "id": "challenger-flyer",
+      "label": "Torn Flyer Wall",
+      "lineage": "club wall of stapled flyers, torn back in strips to expose earlier nights",
+      "thesis": "The project gallery as a wall of flyers: tear a strip back to reveal the earlier work underneath.",
+      "case": "Best fit for 'show everything' — layers solve browsing dozens of projects — but club-culture, not tech; needs strict scanability.",
+      "palette": ["#e8e6e0", "#facc15", "#4ade80", "#38bdf8", "#1a1a1a"],
+      "materials": ["photocopy paper", "staple holes", "fluorescent stock"],
+      "viewport": "A bright wall of flyer-like project cards; pulling a tear strip exposes the project generation beneath it.",
+      "risk": "Dense and busy by nature — readability must be engineered hard.",
+      "sketch": ".impeccable/sketches/challenger-flyer.svg",
+      "hero": "https://impeccable.style/worlds/cards/posters-covers-sleeves-torn-flyer-photocopy-wall-hero.webp",
+      "board": "https://impeccable.style/worlds/cards/posters-covers-sleeves-torn-flyer-photocopy-wall.webp"
+    }
+  ],
+  "reroll": true,
+  "canon": true,
+  "canonCard": {
+    "label": "Category Standard",
+    "thesis": "The dark developer-portfolio grid this category always ships — executed impeccably.",
+    "viewport": "Hero, project cards, socials — the arrangement a visitor expects, at full craft.",
+    "palette": ["#0c0c0e", "#8b5cf6", "#e9e8e6"],
+    "materials": ["card grid", "violet accent", "rounded corners"],
+    "sketch": ".impeccable/sketches/canon.svg"
+  },
+  "steer": true
+}

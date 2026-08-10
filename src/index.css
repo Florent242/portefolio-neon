@@ -1,0 +1,305 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-room: var(--neon-bg);
+  --color-room-soft: var(--neon-bg-soft);
+  --color-panel: var(--neon-panel);
+  --color-raised: var(--neon-raised);
+  --color-line: var(--neon-line);
+  --color-ink: var(--neon-text);
+  --color-inkdim: var(--neon-dim);
+  --color-cobalt: var(--neon-cobalt);
+  --color-cobsoft: var(--neon-cobalt-soft);
+  --color-electrode: var(--neon-electrode);
+  --color-argon: var(--neon-argon);
+  --color-neongas: var(--neon-neongas);
+  --color-helium: var(--neon-helium);
+  --color-xenon: var(--neon-xenon);
+  --color-krypton: var(--neon-krypton);
+  --color-radon: var(--neon-radon);
+  --font-display: "Clash Display", "Instrument Sans", system-ui, sans-serif;
+  --font-body: "Instrument Sans", system-ui, sans-serif;
+  --font-stencil: "Big Shoulders Stencil Text", "Instrument Sans", sans-serif;
+}
+
+:root {
+  --neon-bg: #08070d;
+  --neon-bg-soft: #0d0c17;
+  --neon-panel: #12101f;
+  --neon-raised: #1a1730;
+  --neon-line: rgb(255 255 255 / 0.09);
+  --neon-text: #edeaf6;
+  --neon-dim: #a29ab8;
+  --neon-cobalt: #2f5cff;
+  --neon-cobalt-soft: rgb(47 92 255 / 0.14);
+  --neon-electrode: #ff4438;
+  --neon-argon: #ff5c8a;
+  --neon-neongas: #ff4d4d;
+  --neon-helium: #ffd166;
+  --neon-xenon: #7dd3fc;
+  --neon-krypton: #c7d6ff;
+  --neon-radon: #6ee7b7;
+  color-scheme: dark;
+}
+
+[data-theme="light"] {
+  --neon-bg: #f1ede4;
+  --neon-bg-soft: #e9e4d8;
+  --neon-panel: #fbf9f2;
+  --neon-raised: #ffffff;
+  --neon-line: rgb(28 24 48 / 0.12);
+  --neon-text: #1d1a2b;
+  --neon-dim: #5f5872;
+  --neon-cobalt-soft: rgb(47 92 255 / 0.1);
+  color-scheme: light;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5.5rem;
+}
+
+body {
+  background-color: var(--neon-bg);
+  color: var(--neon-text);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  overflow-x: clip;
+}
+
+::selection {
+  background: var(--neon-cobalt);
+  color: #fff;
+}
+
+:focus-visible {
+  outline: 2px solid var(--neon-cobalt);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+/* ---------- Neon world utilities ---------- */
+
+.silkscreen {
+  font-family: var(--font-stencil);
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+}
+
+.display {
+  font-family: var(--font-display);
+}
+
+.tube-glow {
+  filter: drop-shadow(0 0 7px var(--tube-glow, var(--neon-cobalt))) drop-shadow(0 0 22px var(--tube-glow, var(--neon-cobalt)));
+}
+
+.panel {
+  background-color: var(--neon-panel);
+  border: 1px solid var(--neon-line);
+}
+
+.panel-hover {
+  transition: border-color 0.35s ease, box-shadow 0.35s ease, transform 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.panel-hover:hover {
+  border-color: var(--card-gas, var(--neon-cobalt));
+  box-shadow: 0 0 0 1px var(--card-gas, transparent), 0 14px 40px -18px var(--card-gas, transparent);
+}
+
+.btn-tube {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-family: var(--font-stencil);
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  border: 1px solid var(--neon-cobalt);
+  color: var(--neon-cobalt);
+  padding: 0.8rem 1.6rem;
+  border-radius: 4px;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease, color 0.3s ease, transform 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.btn-tube:hover {
+  background-color: var(--neon-cobalt-soft);
+  box-shadow: 0 0 24px -6px var(--neon-cobalt);
+  transform: translateY(-1px);
+}
+
+.btn-tube:active {
+  transform: translateY(0);
+}
+
+.btn-tube-filled {
+  background-color: var(--neon-cobalt);
+  color: #0a0812;
+}
+
+.btn-tube-filled:hover {
+  background-color: var(--neon-cobalt);
+  color: #0a0812;
+  box-shadow: 0 0 34px -4px var(--neon-cobalt);
+}
+
+.btn-tube-bare {
+  border-color: var(--neon-line);
+  color: var(--neon-dim);
+}
+
+.btn-tube-bare:hover {
+  border-color: var(--neon-cobalt);
+  color: var(--neon-cobalt);
+  background-color: transparent;
+}
+
+/* Circuit bus: the horizontal line that carries sections */
+.circuit-bus {
+  position: relative;
+  height: 1px;
+  background: var(--neon-line);
+}
+
+.circuit-bus::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: -2px;
+  width: 6px;
+  height: 6px;
+  border-radius: 9999px;
+  background: var(--neon-electrode);
+  box-shadow: 0 0 10px var(--neon-electrode);
+}
+
+.circuit-bus::before {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: -2px;
+  width: 6px;
+  height: 6px;
+  border-radius: 9999px;
+  background: var(--neon-cobalt);
+  box-shadow: 0 0 10px var(--neon-cobalt);
+}
+
+/* Gas LED dot */
+.gas-led {
+  width: 10px;
+  height: 10px;
+  border-radius: 9999px;
+  background: var(--led, var(--neon-cobalt));
+  box-shadow: 0 0 8px var(--led, var(--neon-cobalt));
+  flex-shrink: 0;
+}
+
+/* Gas chip */
+.gas-chip {
+  font-family: var(--font-stencil);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.7rem;
+  padding: 0.3rem 0.7rem;
+  border: 1px solid var(--neon-line);
+  border-radius: 9999px;
+  color: var(--neon-dim);
+  transition: border-color 0.25s ease, color 0.25s ease;
+}
+
+.gas-chip:hover {
+  border-color: var(--chip-gas, var(--neon-cobalt));
+  color: var(--chip-gas, var(--neon-cobalt));
+}
+
+.gas-chip-active {
+  border-color: var(--chip, var(--neon-cobalt));
+  color: var(--chip, var(--neon-cobalt));
+  background: var(--chip-soft, var(--neon-cobalt-soft));
+}
+
+/* ---------- Motion ---------- */
+
+@keyframes gas-breathe {
+  0%, 100% { opacity: 0.82; }
+  50% { opacity: 1; }
+}
+
+@keyframes neon-flicker {
+  0%, 100% { opacity: 1; }
+  92% { opacity: 1; }
+  93% { opacity: 0.55; }
+  94% { opacity: 1; }
+  97% { opacity: 0.7; }
+  98% { opacity: 1; }
+}
+
+@keyframes rise-in {
+  from { opacity: 0; transform: translateY(22px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes roles-flip-out {
+  from { opacity: 1; transform: translateY(0); }
+  to { opacity: 0; transform: translateY(-10px); }
+}
+
+@keyframes roles-flip-in {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes scroll-hint {
+  0% { transform: translateY(-6px); opacity: 0; }
+  30% { opacity: 1; }
+  100% { transform: translateY(10px); opacity: 0; }
+}
+
+.tube-shimmer {
+  animation: gas-breathe 3.4s ease-in-out infinite;
+}
+
+.tube-flicker {
+  animation: neon-flicker 7s linear infinite;
+}
+
+.reveal {
+  opacity: 0;
+}
+
+.reveal-in {
+  animation: rise-in 0.7s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.roles-flip-out {
+  animation: roles-flip-out 0.22s ease forwards;
+}
+
+.roles-flip-in {
+  animation: roles-flip-in 0.26s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.scroll-hint {
+  animation: scroll-hint 2.2s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tube-shimmer,
+  .tube-flicker,
+  .scroll-hint {
+    animation: none;
+  }
+
+  .reveal {
+    opacity: 1;
+  }
+
+  .reveal-in {
+    animation: none;
+  }
+
+  html {
+    scroll-behavior: auto;
+  }
+}

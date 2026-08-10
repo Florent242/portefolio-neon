@@ -1,0 +1,142 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-08-10T23:00:00Z",
+  "title": "Design System: Florent BOUDZOUMOU — Neon Circuit",
+  "extensions": {
+    "colorMeta": {
+      "cobalt": { "role": "primary", "displayName": "Cobalt Discharge", "canonical": "#2f5cff", "tonalRamp": ["#08102e", "#0d1a4d", "#12256b", "#16308c", "#1a3cb0", "#1e47d8", "#2f5cff", "#7d99ff"] },
+      "electrode": { "role": "secondary", "displayName": "Electrode Red", "canonical": "#ff4438", "tonalRamp": ["#2e0806", "#4d0d0a", "#6b120d", "#8c1710", "#b01c13", "#d82217", "#ff4438", "#ffa39c"] },
+      "argon": { "role": "tertiary", "displayName": "Argon Pink", "canonical": "#ff5c8a", "tonalRamp": ["#2e0a16", "#4d1125", "#6b1735", "#8c1d45", "#b02355", "#d82a68", "#ff5c8a", "#ffb7cb"] },
+      "neongas": { "role": "tertiary", "displayName": "Neon Red", "canonical": "#ff4d4d", "tonalRamp": ["#2e0909", "#4d0f0f", "#6b1515", "#8c1b1b", "#b02121", "#d82828", "#ff4d4d", "#ffb3b3"] },
+      "helium": { "role": "tertiary", "displayName": "Helium Gold", "canonical": "#ffd166", "tonalRamp": ["#2e2410", "#4d3b1b", "#6b5326", "#8c6b31", "#b0833c", "#d89c4a", "#ffd166", "#ffeec2"] },
+      "xenon": { "role": "tertiary", "displayName": "Xenon Sky", "canonical": "#7dd3fc", "tonalRamp": ["#14262e", "#1f3d4d", "#2b556b", "#376d8c", "#4385b0", "#4f9dd8", "#7dd3fc", "#c8e9fd"] },
+      "krypton": { "role": "tertiary", "displayName": "Krypton Lavender", "canonical": "#c7d6ff", "tonalRamp": ["#24272e", "#3a404d", "#515a6b", "#68748c", "#7f8eb0", "#96a8d8", "#c7d6ff", "#e4ebff"] },
+      "radon": { "role": "tertiary", "displayName": "Radon Mint", "canonical": "#6ee7b7", "tonalRamp": ["#132a22", "#1f4739", "#2b6450", "#378168", "#439e80", "#4fbb98", "#6ee7b7", "#c0f4e2"] },
+      "room-dark": { "role": "neutral", "displayName": "Night Room", "canonical": "#08070d", "tonalRamp": ["#08070d", "#0a0910", "#0d0c17", "#12101f", "#1a1730", "#2a2647", "#3d3862", "#5b5585"] },
+      "room-light": { "role": "neutral", "displayName": "Day Workshop", "canonical": "#f1ede4", "tonalRamp": ["#f1ede4", "#e9e4d8", "#ddd6c6", "#c9bfa9", "#a89b80", "#7f745e", "#5f5872", "#1d1a2b"] },
+      "ink-dark": { "role": "neutral", "displayName": "Night Ink", "canonical": "#edeaf6", "tonalRamp": ["#8f88a8", "#a29ab8", "#b5aec8", "#c9c3d8", "#dcd8e7", "#edeaf6", "#f4f2fa", "#faf9fd"] },
+      "inkdim-dark": { "role": "neutral", "displayName": "Night Ink Dim", "canonical": "#a29ab8", "tonalRamp": ["#58526a", "#655f78", "#736c86", "#817a95", "#8f88a4", "#9d96b0", "#a29ab8", "#b8b1ca"] },
+      "ink-light": { "role": "neutral", "displayName": "Day Ink", "canonical": "#1d1a2b", "tonalRamp": ["#100e17", "#141120", "#1d1a2b", "#2a263d", "#3a3552", "#4b4569", "#5f5872", "#8f88a8"] },
+      "inkdim-light": { "role": "neutral", "displayName": "Day Ink Dim", "canonical": "#5f5872", "tonalRamp": ["#241f35", "#2e2940", "#3a354e", "#47425d", "#554f6c", "#5f5872", "#756e8b", "#8f88a8"] }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Clash Display", "purpose": "The name, section titles, and project card names only." },
+      "label": { "displayName": "Big Shoulders Stencil Text", "purpose": "All signage: buttons, nav, chips, captions, metadata. Always uppercase, 0.12–0.16em tracking." }
+    },
+    "shadows": [
+      { "name": "tube-glow", "value": "drop-shadow(0 0 7px C) drop-shadow(0 0 22px C)", "purpose": "The glass tube's own light — only on neon strokes." },
+      { "name": "card-hover-glow", "value": "0 0 0 1px var(--card-gas), 0 14px 40px -18px var(--card-gas)", "purpose": "Panel hover state; the card's gas lights up." },
+      { "name": "button-hover-glow", "value": "0 0 24px -6px var(--neon-cobalt)", "purpose": "Button hover state." },
+      { "name": "terminal-glow", "value": "0 0 10px var(--led)", "purpose": "Bus terminals and gas LEDs — always lit." },
+      { "name": "flagship-rest-glow", "value": "0 0 60px -24px var(--card-gas)", "purpose": "Flagship cards hold a soft gas glow at rest." }
+    ],
+    "motion": [
+      { "name": "gas-breathe", "value": "opacity 0.82↔1, 3.4s ease-in-out infinite", "purpose": "The sign's steady state." },
+      { "name": "neon-flicker", "value": "7s linear infinite, opacity dips at 93%/97%", "purpose": "Rare authentic flicker on the tube." },
+      { "name": "power-on-warmup", "value": "2.6s shimmer once", "purpose": "Hero sign entrance." },
+      { "name": "rise-in", "value": "translateY(22px)→0, 0.7s cubic-bezier(0.22,1,0.36,1)", "purpose": "Scroll reveal and hero stagger." },
+      { "name": "roles-flip", "value": "10px translate swap, 0.22–0.26s", "purpose": "Role line rotation in the hero." },
+      { "name": "ease-out-expo", "value": "cubic-bezier(0.22, 1, 0.36, 1)", "purpose": "Default easing for state transitions." },
+      { "name": "reduce-motion-fallback", "value": "all animations disabled under prefers-reduced-motion", "purpose": "Accessibility floor." }
+    ],
+    "breakpoints": [
+      { "name": "sm", "value": "640px" },
+      { "name": "md", "value": "768px" },
+      { "name": "lg", "value": "1024px" },
+      { "name": "xl", "value": "1280px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button (Filled)",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "The lit switch: cobalt-filled CTA. Used for 'Get in touch' and the GitHub link.",
+      "html": "<button class=\"ds-btn-primary\" type=\"button\"><svg viewBox=\"0 0 24 24\" width=\"15\" height=\"15\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><rect x=\"2\" y=\"4\" width=\"20\" height=\"16\" rx=\"2\"/><path d=\"m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7\"/></svg>GET IN TOUCH</button>",
+      "css": ".ds-btn-primary{display:inline-flex;align-items:center;gap:0.6rem;font-family:'Big Shoulders Stencil Text','Instrument Sans',sans-serif;text-transform:uppercase;letter-spacing:0.14em;font-size:0.8rem;border:1px solid var(--neon-cobalt,#2f5cff);background:var(--neon-cobalt,#2f5cff);color:#0a0812;padding:12px 24px;border-radius:4px;cursor:pointer;transition:box-shadow .3s ease,transform .3s cubic-bezier(.22,1,.36,1)}.ds-btn-primary:hover{box-shadow:0 0 34px -4px var(--neon-cobalt,#2f5cff);transform:translateY(-1px)}.ds-btn-primary:focus-visible{outline:2px solid var(--neon-cobalt,#2f5cff);outline-offset:3px}.ds-btn-primary:active{transform:translateY(0)}"
+    },
+    {
+      "name": "Outline Button (Bare)",
+      "kind": "button",
+      "refersTo": "button-outline",
+      "description": "The unlit switch: transparent with a cobalt label and border. Used for 'Download CV'.",
+      "html": "<button class=\"ds-btn-outline\" type=\"button\"><svg viewBox=\"0 0 24 24\" width=\"15\" height=\"15\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4\"/><polyline points=\"7 10 12 15 17 10\"/><line x1=\"12\" x2=\"12\" y1=\"15\" y2=\"3\"/></svg>DOWNLOAD CV</button>",
+      "css": ".ds-btn-outline{display:inline-flex;align-items:center;gap:0.6rem;font-family:'Big Shoulders Stencil Text','Instrument Sans',sans-serif;text-transform:uppercase;letter-spacing:0.14em;font-size:0.8rem;border:1px solid var(--neon-cobalt,#2f5cff);background:transparent;color:var(--neon-cobalt,#2f5cff);padding:12px 24px;border-radius:4px;cursor:pointer;transition:background-color .3s ease,box-shadow .3s ease,color .3s ease,transform .3s cubic-bezier(.22,1,.36,1)}.ds-btn-outline:hover{background:rgba(47,92,255,.14);box-shadow:0 0 24px -6px var(--neon-cobalt,#2f5cff);transform:translateY(-1px)}.ds-btn-outline:focus-visible{outline:2px solid var(--neon-cobalt,#2f5cff);outline-offset:3px}.ds-btn-outline:active{transform:translateY(0)}"
+    },
+    {
+      "name": "Gas Chip",
+      "kind": "chip",
+      "refersTo": "chip-gas",
+      "description": "A project's gas label: pill with a 1px line border, stencil text; hover lights it in its own gas.",
+      "html": "<span class=\"ds-chip\">AI</span>",
+      "css": ".ds-chip{display:inline-block;font-family:'Big Shoulders Stencil Text','Instrument Sans',sans-serif;text-transform:uppercase;letter-spacing:0.12em;font-size:0.7rem;padding:4px 10px;border:1px solid var(--neon-line,rgba(255,255,255,.09));border-radius:9999px;color:var(--neon-dim,#a29ab8);transition:border-color .25s ease,color .25s ease}.ds-chip:hover,.ds-chip[data-active=\"true\"]{border-color:var(--chip-gas,var(--neon-cobalt,#2f5cff));color:var(--chip-gas,var(--neon-cobalt,#2f5cff))}"
+    },
+    {
+      "name": "Panel Card",
+      "kind": "card",
+      "refersTo": "card-panel",
+      "description": "The room's flat surface: 1px line border, panel fill, 2px corners. Hover lights its gas border and adds a soft under-glow.",
+      "html": "<article class=\"ds-card\" style=\"--card-gas:#ff5c8a\"><h3 style=\"font-family:'Clash Display','Instrument Sans',sans-serif;font-size:1.25rem;font-weight:600;letter-spacing:-0.03em;color:var(--neon-text,#edeaf6);margin:0 0 6px\">AKOWE</h3><p style=\"font-size:0.875rem;line-height:1.7;color:var(--neon-dim,#a29ab8);margin:0\">University online library — React SPA on a secured Laravel REST API.</p></article>",
+      "css": ".ds-card{background:var(--neon-panel,#12101f);border:1px solid var(--neon-line,rgba(255,255,255,.09));border-radius:2px;padding:16px 20px;transition:border-color .35s ease,box-shadow .35s ease,transform .35s cubic-bezier(.22,1,.36,1)}.ds-card:hover{border-color:var(--card-gas,var(--neon-cobalt,#2f5cff));box-shadow:0 0 0 1px var(--card-gas,transparent),0 14px 40px -18px var(--card-gas,transparent);transform:translateY(-2px)}"
+    },
+    {
+      "name": "Text Input",
+      "kind": "input",
+      "refersTo": "input-field",
+      "description": "Workshop field: transparent fill, 1px line border, 4px corners; focus turns the border cobalt.",
+      "html": "<label style=\"font-family:'Big Shoulders Stencil Text','Instrument Sans',sans-serif;text-transform:uppercase;letter-spacing:0.16em;font-size:0.7rem;color:var(--neon-dim,#a29ab8);display:block;margin-bottom:6px\">Email</label><input class=\"ds-input\" type=\"email\" placeholder=\"ada@example.com\" aria-label=\"Email\">",
+      "css": ".ds-input{display:block;width:100%;height:44px;padding:12px;border:1px solid var(--neon-line,rgba(255,255,255,.09));border-radius:4px;background:transparent;color:var(--neon-text,#edeaf6);font-family:'Instrument Sans',system-ui,sans-serif;font-size:0.9rem;outline:none;transition:border-color .3s ease}.ds-input::placeholder{color:color-mix(in srgb,var(--neon-dim,#a29ab8) 60%,transparent)}.ds-input:focus{border-color:var(--neon-cobalt,#2f5cff)}.ds-input:focus-visible{outline:2px solid var(--neon-cobalt,#2f5cff);outline-offset:2px}"
+    },
+    {
+      "name": "Nav Link",
+      "kind": "nav",
+      "refersTo": "button-outline",
+      "description": "Silkscreen section link in the transformer bar; the active section glows cobalt.",
+      "html": "<nav style=\"display:flex;gap:4px;align-items:center\"><a class=\"ds-navlink\" href=\"#projects\">Projects</a><a class=\"ds-navlink ds-navlink-active\" href=\"#github\">GitHub</a></nav>",
+      "css": ".ds-navlink{font-family:'Big Shoulders Stencil Text','Instrument Sans',sans-serif;text-transform:uppercase;letter-spacing:0.16em;font-size:0.75rem;color:var(--neon-dim,#a29ab8);text-decoration:none;padding:8px 12px;border-radius:2px;transition:color .3s ease}.ds-navlink:hover{color:var(--neon-text,#edeaf6)}.ds-navlink-active{color:var(--neon-cobalt,#2f5cff);text-shadow:0 0 14px var(--neon-cobalt,#2f5cff)}.ds-navlink:focus-visible{outline:2px solid var(--neon-cobalt,#2f5cff);outline-offset:2px}"
+    },
+    {
+      "name": "NeonSign — FB Monogram",
+      "kind": "custom",
+      "refersTo": "card-panel",
+      "description": "The signature: the FB monogram as one continuous glass tube, cobalt discharge, red electrode seals, double-layer glow, breathing slowly.",
+      "html": "<svg viewBox=\"0 0 320 320\" width=\"220\" height=\"220\" role=\"img\" aria-label=\"Florent Boudzoumou monogram\"><path d=\"M 52 236 V 88 H 140 V 112 H 76 V 164 H 132 L 172 164 V 236 A 50 50 0 0 0 272 236 V 168 A 60 60 0 0 0 172 118\" fill=\"none\" stroke=\"var(--neon-cobalt,#2f5cff)\" stroke-width=\"10\" stroke-linecap=\"round\" opacity=\"0.4\"/><path d=\"M 52 236 V 88 H 140 V 112 H 76 V 164 H 132 L 172 164 V 236 A 50 50 0 0 0 272 236 V 168 A 60 60 0 0 0 172 118\" fill=\"none\" stroke=\"var(--neon-cobalt,#2f5cff)\" stroke-width=\"10\" stroke-linecap=\"round\" style=\"filter:drop-shadow(0 0 7px var(--neon-cobalt,#2f5cff)) drop-shadow(0 0 22px var(--neon-cobalt,#2f5cff));animation:ds-breathe 3.4s ease-in-out infinite\"/><circle cx=\"52\" cy=\"236\" r=\"5\" fill=\"var(--neon-electrode,#ff4438)\" style=\"filter:drop-shadow(0 0 6px var(--neon-electrode,#ff4438))\"/><circle cx=\"172\" cy=\"118\" r=\"5\" fill=\"var(--neon-electrode,#ff4438)\" style=\"filter:drop-shadow(0 0 6px var(--neon-electrode,#ff4438))\"/><style>@keyframes ds-breathe{0%,100%{opacity:.82}50%{opacity:1}}@media (prefers-reduced-motion: reduce){.ds-breathe{animation:none}}</style></svg>",
+      "css": ".ds-neon-sign{filter:drop-shadow(0 0 7px var(--neon-cobalt,#2f5cff)) drop-shadow(0 0 22px var(--neon-cobalt,#2f5cff));animation:ds-breathe 3.4s ease-in-out infinite}@keyframes ds-breathe{0%,100%{opacity:.82}50%{opacity:1}}@media (prefers-reduced-motion: reduce){.ds-neon-sign{animation:none}}"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Neon Circuit — the portfolio as the neon sign of its own author.",
+    "overview": "The portfolio is the sign that names the architect who built it: one continuous glass tube, hand-bent into the FB monogram, hanging in a dark room. The page is the circuit that keeps it lit — navigation is the transformer bar feeding the tube, sections are separated by the circuit bus, and every project is a gas in the discharge spectrum.\n\nThe room has two confirmed states: the sign room at night (default, #08070d near-black with a cobalt discharge and warm electrode reds) and the workshop at day (pale plaster #f1ede4, softer ink, same layout and gas logic). Everything is one continuous visual: no gradients, no glass blur, no shadows beyond a light source's actual glow. Signage is stencil silkscreen; display type is Clash Display; body copy is Instrument Sans.",
+    "keyCharacteristics": [
+      "The FB monogram is always one continuous tube path — never two letters, never split.",
+      "Every color is a real gas discharge; gas color is the project taxonomy.",
+      "Panels are flat, 1px-bordered, with a glow that only appears on hover or from a lit source.",
+      "Labels are silkscreen stencil, uppercase, letter-spaced; body measure stays 65–75ch.",
+      "One authored motion: the gas breath and the power-on warm-up. Everything else is state response."
+    ],
+    "rules": [
+      { "name": "The Gas Rule", "body": "Every colored accent must be a real gas in the spectrum — no invented hues. If a project doesn't earn a gas, it gets no color.", "section": "colors" },
+      { "name": "The Room Rule", "body": "Dark is the room at night (default); light is the workshop at day. The two states share every token except neutrals — never fork the palette per theme.", "section": "colors" },
+      { "name": "The 1px Rule", "body": "No border or divider is ever thicker than 1px.", "section": "colors" },
+      { "name": "The Silkscreen Rule", "body": "Anything that reads as signage — buttons, nav, chips, captions — is stencil, uppercase. Anything meant to be read — paragraphs, descriptions — is Instrument Sans.", "section": "typography" },
+      { "name": "The No-Fake-Light Rule", "body": "A glow only appears where a light source exists in the room: the tube, the terminals, or a hovered interactive element. Never shadow a static card at rest.", "section": "elevation" },
+      { "name": "The Flat-At-Rest Rule", "body": "Panels have no shadow at rest — only their 1px line and their own surface color.", "section": "elevation" }
+    ],
+    "dos": [
+      "Do keep the FB monogram a single continuous tube path; never render it as two letters or a broken stroke.",
+      "Do assign every project card exactly one gas from the spectrum; the gas IS the category signal.",
+      "Do keep paragraph measure between 65 and 75 characters; descriptions at 0.875–1rem.",
+      "Do use the stencil silkscreen for anything label-like (buttons, nav, chips, captions) and Instrument Sans for reading copy.",
+      "Do place glow only where a light source exists — tube, terminals, or a hovered control.",
+      "Do respect prefers-reduced-motion: breath, flicker, reveal and scroll hints all fall back to static."
+    ],
+    "donts": [
+      "Don't use borders thicker than 1px, decorative side stripes, or gradient text anywhere.",
+      "Don't introduce rounded glass, backdrop blur beyond the nav scrim, or emoji.",
+      "Don't fake materials — no CSS bevels, embossing, or metal/chalk effects; the only material in the room is the glass tube, rendered as real SVG strokes with real glow.",
+      "Don't add an offset shadow to any surface at rest.",
+      "Don't invent new accent colors outside the gas spectrum.",
+      "Don't let the hero carry more than one authored motion; extra animation dilutes the power-on moment."
+    ]
+  }
+}
