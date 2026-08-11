@@ -59,7 +59,7 @@ export default function GitHub() {
         </p>
       </Reveal>
 
-      <div className="mt-12 grid gap-3 sm:grid-cols-2">
+      <div className="mt-12 grid grid-cols-1 gap-3 sm:grid-cols-2">
         {repos === null ? (
           Array.from({ length: 8 }).map((_, i) => (
             <div key={i} className="panel h-28 animate-pulse" style={{ backgroundColor: "var(--neon-panel)" }} role="status" aria-label="Loading GitHub repositories" />

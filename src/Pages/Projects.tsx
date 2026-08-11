@@ -133,7 +133,7 @@ export default function Projects() {
         </p>
       </Reveal>
 
-      <div className="mt-12 grid gap-6 md:grid-cols-2">
+      <div className="mt-12 grid grid-cols-1 gap-6 md:grid-cols-2">
         {flagships.map((p, i) => (
           <Flagship key={p.name} p={p} delay={i * 100} />
         ))}
@@ -189,7 +189,7 @@ export default function Projects() {
         <p className="mt-10 text-sm text-inkdim">No project in this filter — try another gas.</p>
       )}
 
-      <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+      <div className="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
         {visible.map((p, i) => (
           <ProjectCard key={p.name} p={p} i={i} />
         ))}

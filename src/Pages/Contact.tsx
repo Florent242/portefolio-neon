@@ -5,7 +5,7 @@ import Reveal from "../components/Reveal";
 export default function Contact() {
   return (
     <section id="contact" className="mx-auto w-full max-w-6xl px-4 py-24 sm:px-6">
-      <div className="grid items-start gap-12 md:grid-cols-[minmax(0,5fr)_minmax(0,7fr)]">
+      <div className="grid grid-cols-1 items-start gap-12 md:grid-cols-[minmax(0,5fr)_minmax(0,7fr)]">
         <Reveal>
           <p className="silkscreen text-xs text-cobalt" style={{ textShadow: "0 0 12px var(--neon-cobalt)" }}>
             FIG_005 — CONTACT

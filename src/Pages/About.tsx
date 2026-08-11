@@ -11,7 +11,7 @@ const FACTS = [
 export default function About() {
   return (
     <section id="about" className="mx-auto w-full max-w-6xl px-4 py-24 sm:px-6">
-      <div className="grid items-start gap-12 md:grid-cols-[minmax(0,5fr)_minmax(0,7fr)]">
+      <div className="grid grid-cols-1 items-start gap-12 md:grid-cols-[minmax(0,5fr)_minmax(0,7fr)]">
         <Reveal>
           <div className="relative mx-auto w-56 md:mx-0">
             <div

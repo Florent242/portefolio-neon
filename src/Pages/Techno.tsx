@@ -50,7 +50,7 @@ export default function Techno() {
         </p>
       </Reveal>
 
-      <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+      <div className="mt-12 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
         {GROUPS.map((g, i) => (
           <Reveal key={g.title} delay={i * 80}>
             <article className="panel panel-hover flex h-full flex-col p-5" style={{ "--card-gas": g.gas } as CSSProperties}>

@@ -34,7 +34,7 @@ export default function Home() {
         </div>
 
         <Reveal delay={120}>
-          <h1 className="display text-5xl font-semibold leading-[1.05] tracking-tight text-ink sm:text-6xl md:text-7xl">
+          <h1 className="display text-[2.75rem] font-semibold leading-[1.05] tracking-tight text-ink sm:text-6xl md:text-7xl">
             Florent BOUDZOUMOU
           </h1>
         </Reveal>

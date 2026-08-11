@@ -64,7 +64,7 @@ export default function Nav() {
       <div className="mx-auto flex h-16 max-w-6xl items-center gap-3 px-4 sm:px-6">
         <a href="#top" className="flex shrink-0 items-center gap-2" aria-label="Back to top">
           <span className="block w-9">
-            <NeonSign className="scale-110" />
+            <NeonSign />
           </span>
           <span className="silkscreen hidden text-sm text-ink sm:inline">F.B.</span>
         </a>
